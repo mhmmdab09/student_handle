@@ -25,6 +25,6 @@ def use_session():
 
 @app.route('/v1/list_students')
 def list_students():
-    pass
+    return("is working")
 
 
