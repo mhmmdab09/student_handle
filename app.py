@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 app = Flask(__name__)
 
 
@@ -25,6 +25,10 @@ def use_session():
 
 @app.route('/v1/list_students')
 def list_students():
-    return("is working")
+    print("list student printing")
+    data = {"message" : "app is running"}
+    return jsonify(data), 200
 
 
+if __name__ == "__main__":
+    app.run("0.0.0.0", 5000, debug=True)
